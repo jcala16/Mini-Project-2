@@ -20,3 +20,32 @@ body {
     font-size: 24px ;
     font-family: "Monaco",  monospace;
 }
+
+.grid-container { 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px;
+
+}
+.intrstructions {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+@media (max-width: 480px) {
+    .list{
+        font-size: 2rem
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .intrstructions {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
